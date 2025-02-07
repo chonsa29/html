@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:1000px;
+            height:500px;
+            border: 1px solid #ccc;
+        }
+        .grad1{
+            background:radial-gradient(green, yellowgreen, rgb(173, 255, 173))
+        }
+        .grad2{
+            background:radial-gradient(circle,green, yellowgreen, rgb(173, 255, 173))
+        }
+        .grad3{
+            background:radial-gradient(circle at 25% 525%,green, rgb(235, 255, 194))
+        }
+        .grad4{
+            background:radial-gradient(circle,green, yellowgreen 15%, rgb(173, 255, 173) 50%)
+        }
+    </style>
+</head>
+<body>
+    <div class="box grad4"></div>
+</body>
+</html>
