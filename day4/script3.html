@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<input type="text" placeholder="숫자1" id="val1"><br>
+<input type="text" placeholder="숫자2" id="val2"><br>
+<button onclick="sum()">더하기</button>
+<!-- <button onclick="sum()"></button> -->
+<script>
+
+    function sum() {
+        let obj1 = document.querySelector("#val1").value;
+        let obj2 = document.querySelector("#val2").value;
+
+        //문자를 숫자로 -> parseInt, Number
+        console.log(parseInt(obj1)+parseInt(obj2));
+        
+    }
+
+</script>
