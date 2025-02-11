@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a" style="color:blue;">자바는 재밌다!</h1>
+    <button onclick="change_color()">색 변경</button>
+</body>
+</html>
+
+<script>
+    let obj = document.querySelector("#a");
+
+    function change_color(){
+        let obj = document.querySelector("#a");
+        obj.style.backgroundColor = "#eee";
+        if(obj.style.color == "red"){
+            obj.style.color="blue";
+        }
+        else{
+            obj.style.color="red";
+        }
+    }
+</script>

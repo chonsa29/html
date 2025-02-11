@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            width:500px;
+            height:500px;
+            background-image:url("../day2/media/1.png");
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="image" onclick="fnChange()"></div>
+</body>
+</html>
+
+<script>
+    function fnChange(){
+        let img = document.querySelector("#image");
+        let str = img.style.backgroundImage;
+        console.log(str);
+        if(img.style.backgroundImage = str){
+            img.style.backgroundImage = "url(\"../day2/media/2.png\")";
+            console.log("adsf");
+        }else if(img.style.backgroundImage = str){
+            img.style.backgroundImage = "url(\"../day2/media/1.png\")";
+        
+        }
+    }
+</script>
