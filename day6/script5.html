@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><input type="radio" name="subject" value="java">자바</label><br>
+    <label><input type="radio" name="subject" value="oracle">오라클</label><br>
+    <label><input type="radio" name="subject" value="html">html</label><br>
+    <label> <input type="radio" name="subject" value="jquery">jquery</label><br>
+    <button onclick="fnSubject()">선택!</button>
+    <div>
+        <img id="image">
+    </div>
+</body>
+</html>
+
+<script>
+    function fnSubject(){
+        let subject = document.querySelector("input[name='subject']:checked");
+        let img = document.querySelector("#image");
+        
+        if(subject){
+            if(subject.value=="java"){
+                img.src = "../day2/media/1.png";
+            }else if(subject.value =="oracle"){
+                img.src = "../day2/media/2.png";
+            }else if(subject.value=="html"){
+                img.src = "../day2/media/3.jpg";
+            }else if(subject.value=="jquery"){
+                img.src = "../day2/media/java.jpg";
+            }
+        }else{
+            alert("선택 안함");
+        }
+    }
+</script>

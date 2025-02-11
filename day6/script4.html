@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label><input type="radio" name="subject" value="java">자바</label>
+    <label><input type="radio" name="subject" value="oracle">오라클</label>
+    <label><input type="radio" name="subject" value="html">html</label>
+    <label> <input type="radio" name="subject" value="jquery">jquery</label>
+    <button onclick="fnSubject()">선택!</button>
+</body>
+</html>
+
+<script>
+    function fnSubject(){
+        let subject = document.querySelector("input[name='subject']:checked");
+        if(subject){
+            alert(subject.value);
+        }else{
+            alert("선택 안함");
+        }
+    }
+</script>

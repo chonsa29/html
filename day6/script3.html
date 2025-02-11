@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td {
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+            padding: 5px 10px;
+        }
+
+        input {
+            width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="row" value="1"> 행 <input id="col" value="1"> 열 
+    <button onclick="fnDraw()">작성</button>
+    <div id="contents"></div>
+</body>
+
+</html>
+
+<script>
+    function fnDraw(){
+        let contents = document.querySelector("#contents");
+        let table = document.createElement("table");
+
+        let row = document.querySelector("#row").value;
+        let col = document.querySelector("#col").value;
+
+        contents.appendChild(table);
+        for(i = 0; i<row;i++){
+            let r = document.createElement("tr");
+            table.appendChild(r);
+
+            for(j = 0; j< col;j++){
+                let c = document.createElement("td");
+                c.innerHTML = i+ "," +j;
+                r.appendChild(c);
+            }
+        }
+    }
+</script>
