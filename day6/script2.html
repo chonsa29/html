@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div><label>숫자 입력:<input id="input"></label></div>
+    <button onclick="print()">리스트 추가</button>
+    <button onclick="print2()">리스트 추가</button>
+    <button onclick="remove()">리스트 제거</button>
+    <div id="list"></div>
+
+</body>
+
+</html>
+
+
+<script>
+    let listcnt = 0;
+
+    function print() {
+        let list = document.querySelector("#list");
+        let num = document.querySelector("#input").value;
+
+        let ul = document.createElement("ul");
+        list.appendChild(ul);
+
+        let id = document.createAttribute("class");
+        id.value = "ul";
+        ul.setAttributeNode(id);
+
+        for (i = 1; i <= num; i++) {
+            if (i % 2 != 0) {
+                ul.innerHTML = ul.innerHTML + "<li style = \"color:blue;\">" + i + "</li>";
+            } else {
+                ul.innerHTML = ul.innerHTML + "<li>" + i + "</li>";
+            }
+        }
+        if (num) {
+            listcnt++;
+        }
+    }
+
+    function print2() {
+        let list = document.querySelector("#list");
+        let num = document.querySelector("#input").value;
+
+        let ul = document.createElement("ul");
+        let id = document.createAttribute("class");
+        id.value = "ul";
+        ul.setAttributeNode(id);
+        list.appendChild(ul);
+
+        for (i = 1; i <= num; i++) {
+            let li = document.createElement("li");
+            if (i % 2 != 0) {
+                let style = document.createAttribute("style");
+                style.value = "color:blue;";
+                li.setAttributeNode(style);
+            }
+            li.innerHTML = i;
+            ul.appendChild(li);
+        }
+        if (num) {
+            listcnt++;
+        }
+    }
+
+    function remove() {
+        let list = document.querySelector("#list");
+        for (i = 0; i < listcnt; i++) {
+            if (listcnt > 0) {
+                let ul = document.querySelector(".ul");
+                list.removeChild(ul);
+            } else if (listcnt == 0) {
+                console.log("listcnt 가 비어있음");
+            }
+        }
+    }
+
+</script>
