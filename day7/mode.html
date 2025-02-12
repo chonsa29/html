@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        .light-mode {
+            background-color: white;
+            color:black;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color:white;
+        }
+
+        .material-symbols-outlined{
+            cursor:pointer;
+        }
+
+        .container{
+            position:absolute;
+            top:5%;
+            left:40%;
+            width:500px;
+            height:200px;
+            padding: 20px 20px; 
+            border:1px solid black;
+        }
+
+        #button{
+            position:fixed;
+            top:2%;
+            right:2%;
+            cursor:pointer;
+            padding: 10px 10px;
+        }
+
+        .mode1{
+            color:black;
+            background-color:white;
+            border:1px solid black;
+        }
+        .mode2{
+            color:white;
+            background-color:black;
+            border:1px solid white;
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+    <button class="mode1" id="button" onclick="fnMode()">다크모드</button>
+    <div class="container">
+        <h1>프로그래밍 재밌다</h1>
+        <ul>
+            <li>자바</li>
+            <li>자바스크립트</li>
+            <li>jquery</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function fnMode(){
+        let body = document.body;
+        let button= document.querySelector("#button");
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        button.classList.toggle('mode1');
+        button.classList.toggle('mode2');
+        if (body.classList.contains('dark-mode')){
+            button.innerHTML='라이트모드';
+        }else{
+            button.innerHTML='다크모드';
+        }
+    }
+</script>

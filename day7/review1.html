@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        #container {
+            position: absolute;
+            top: 5%;
+            left: 30%;
+            width: 700px;
+        }
+
+        li {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <h1>메모장</h1>
+        <input id="memo">
+        <button id="button" onclick="add()">추가</button>
+        <hr>
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let list = document.querySelector("#list");
+    let lists = document.getElementsByClassName("lists");
+
+    function add() {
+        let memo = document.querySelector("#memo").value;
+        let a = document.createElement("li");
+        a.innerHTML = memo + "<span class=\"material-symbols-outlined\">delete</span>";
+
+        a.onclick = function (e) {
+            let c = confirm("삭제하시겠습니까?");
+            if (c)
+                list.removeChild(this);
+        }
+
+        list.appendChild(a);
+        document.querySelector("#memo").value = "";
+    }
+
+</script>
