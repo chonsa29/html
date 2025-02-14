@@ -192,6 +192,7 @@
     for(let i = 0;i<smallJava.length;i++){
         smallJava[i].onclick = function(e){
             let temp = this.src;
+			console.log(this.length);
             this.src = java.src;
             java.src = temp;
         }
